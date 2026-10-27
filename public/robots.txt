@@ -53,4 +53,4 @@ User-agent: cohere-ai
 Allow: /
 
 # XML Sitemap reference
-Sitemap: https://freiheit-der-zukunft.de/sitemap.xml
+Sitemap: https://quoterbackflip.github.io/die-freiheit-der-zukunft/sitemap.xml

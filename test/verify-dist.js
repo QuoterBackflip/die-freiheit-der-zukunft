@@ -163,7 +163,7 @@ assert(distRobots.includes('sitemap.xml'), 'dist/robots.txt muss sitemap.xml ref
 const distSitemapPath = path.join(distDir, 'sitemap.xml');
 assert(fs.existsSync(distSitemapPath), 'dist/sitemap.xml muss existieren');
 const distSitemap = fs.readFileSync(distSitemapPath, 'utf-8');
-assert(distSitemap.includes('https://freiheit-der-zukunft.de/'), 'dist/sitemap.xml muss Domain enthalten');
+assert(distSitemap.includes('https://quoterbackflip.github.io/die-freiheit-der-zukunft/') || distSitemap.includes('https://freiheit-der-zukunft.de/'), 'dist/sitemap.xml muss Domain enthalten');
 assert(distSitemap.includes('hreflang="zh-CN"'), 'dist/sitemap.xml muss mehrsprachige Alternates enthalten');
 
 // 15. Structured Data and Crawler Fallback in dist/index.html

@@ -4,21 +4,21 @@
   
   <!-- Homepage / Main Library -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freiheit-der-zukunft.de/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freiheit-der-zukunft.de/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freiheit-der-zukunft.de/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://freiheit-der-zukunft.de/?lang=zh-CN"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://freiheit-der-zukunft.de/?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freiheit-der-zukunft.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quoterbackflip.github.io/die-freiheit-der-zukunft/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quoterbackflip.github.io/die-freiheit-der-zukunft/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quoterbackflip.github.io/die-freiheit-der-zukunft/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://quoterbackflip.github.io/die-freiheit-der-zukunft/?lang=zh-CN"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://quoterbackflip.github.io/die-freiheit-der-zukunft/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quoterbackflip.github.io/die-freiheit-der-zukunft/"/>
   </url>
 
   <!-- Gemini Edition (Editorial Edition) -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/#library/gemini/prolog</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/#library/gemini/prolog</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -26,7 +26,7 @@
 
   <!-- Astra 6 Edition (Author's Voice Edition) -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/#library/astra6/prolog</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/#library/astra6/prolog</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -34,7 +34,7 @@
 
   <!-- Grok Edition (Systematic-Analytical Edition) -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/#library/grok/prolog</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/#library/grok/prolog</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -42,7 +42,7 @@
 
   <!-- Claude Edition (Constitutional-Philosophical Edition) -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/#library/claude/prolog</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/#library/claude/prolog</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -50,7 +50,7 @@
 
   <!-- 6 Central Topics -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/#topics</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/#topics</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -58,7 +58,7 @@
 
   <!-- Perspective Synopsis / Comparison View -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/#compare</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/#compare</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -66,7 +66,7 @@
 
   <!-- About Work & Authorship (Waldemar Scheiermann) -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/#about</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/#about</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -74,110 +74,110 @@
 
   <!-- German PDF Downloads -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/Die_Freiheit_der_Zukunft_Gesamtausgabe.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/Die_Freiheit_der_Zukunft_Gesamtausgabe.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/Die_Freiheit_der_Zukunft_Astra_Autorenfassung.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/Die_Freiheit_der_Zukunft_Astra_Autorenfassung.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/Die_Freiheit_der_Zukunft_Grok_Fassung.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/Die_Freiheit_der_Zukunft_Grok_Fassung.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/Die_Freiheit_der_Zukunft_Buchfassung.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/Die_Freiheit_der_Zukunft_Buchfassung.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
 
   <!-- English PDF Downloads -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Complete_English_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Complete_English_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Astra_Authors_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Astra_Authors_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Grok_English_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Grok_English_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Claude_English_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Claude_English_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
 
   <!-- Spanish PDF Downloads -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/La_Libertad_del_Futuro_Edicion_Completa_Espanol.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/La_Libertad_del_Futuro_Edicion_Completa_Espanol.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/La_Libertad_del_Futuro_Astra_Edicion_Autor.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/La_Libertad_del_Futuro_Astra_Edicion_Autor.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/La_Libertad_del_Futuro_Grok_Edicion_Espanol.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/La_Libertad_del_Futuro_Grok_Edicion_Espanol.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/La_Libertad_del_Futuro_Claude_Edicion_Espanol.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/La_Libertad_del_Futuro_Claude_Edicion_Espanol.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
 
   <!-- Chinese PDF Downloads -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Gemini_Chinese_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Gemini_Chinese_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Astra_Chinese_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Astra_Chinese_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Grok_Chinese_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Grok_Chinese_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Claude_Chinese_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Claude_Chinese_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
 
   <!-- Arabic PDF Downloads -->
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Gemini_Arabic_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Gemini_Arabic_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Astra_Arabic_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Astra_Arabic_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Grok_Arabic_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Grok_Arabic_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freiheit-der-zukunft.de/The_Freedom_of_the_Future_Claude_Arabic_Edition.pdf</loc>
+    <loc>https://quoterbackflip.github.io/die-freiheit-der-zukunft/The_Freedom_of_the_Future_Claude_Arabic_Edition.pdf</loc>
     <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>

@@ -313,7 +313,7 @@ assert(robotsContent.includes('sitemap.xml'), 'robots.txt muss Sitemap-Link enth
 const sitemapPath = path.resolve(process.cwd(), 'public/sitemap.xml');
 assert(fs.existsSync(sitemapPath), 'public/sitemap.xml muss existieren');
 const sitemapContent = fs.readFileSync(sitemapPath, 'utf-8');
-assert(sitemapContent.includes('https://freiheit-der-zukunft.de/'), 'sitemap.xml muss Hauptdomain enthalten');
+assert(sitemapContent.includes('https://quoterbackflip.github.io/die-freiheit-der-zukunft/'), 'sitemap.xml muss Hauptdomain enthalten');
 assert(sitemapContent.includes('hreflang="de"'), 'sitemap.xml muss hreflang de enthalten');
 assert(sitemapContent.includes('hreflang="en"'), 'sitemap.xml muss hreflang en enthalten');
 assert(sitemapContent.includes('hreflang="es"'), 'sitemap.xml muss hreflang es enthalten');
