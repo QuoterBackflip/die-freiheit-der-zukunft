@@ -1,0 +1,56 @@
+# robots.txt for Die Freiheit der Zukunft (Waldemar Scheiermann)
+# Public Philosophical Digital Library - Open Access
+# Author: Waldemar Scheiermann
+
+User-agent: *
+Allow: /
+
+# Standard search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI search and knowledge crawlers (explicitly welcomed for indexing and citation)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# XML Sitemap reference
+Sitemap: https://freiheit-der-zukunft.de/sitemap.xml
