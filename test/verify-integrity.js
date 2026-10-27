@@ -320,6 +320,8 @@ assert(sitemapContent.includes('hreflang="es"'), 'sitemap.xml muss hreflang es e
 assert(sitemapContent.includes('hreflang="zh-CN"'), 'sitemap.xml muss hreflang zh-CN enthalten');
 assert(sitemapContent.includes('hreflang="ar"'), 'sitemap.xml muss hreflang ar enthalten');
 assert(sitemapContent.includes('Die_Freiheit_der_Zukunft_Grok_Fassung.pdf'), 'sitemap.xml muss Grok PDF enthalten');
+assert(sitemapContent.includes('Die_Freiheit_der_Zukunft_Buchfassung.pdf'), 'sitemap.xml muss Claude PDF enthalten');
+assert(sitemapContent.includes('library/claude/prolog'), 'sitemap.xml muss Claude-URL enthalten');
 
 const indexHtmlPath = path.resolve(process.cwd(), 'index.html');
 assert(fs.existsSync(indexHtmlPath), 'index.html muss existieren');
