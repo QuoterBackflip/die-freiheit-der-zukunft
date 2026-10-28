@@ -9,6 +9,7 @@ import { ReaderView } from './components/ReaderView';
 import { PreparationView } from './components/PreparationView';
 import { ComparisonView } from './components/ComparisonView';
 import { Footer } from './components/Footer';
+import { SupportSection } from './components/SupportSection';
 import { getManuscript, manuscripts } from './data/manuscripts';
 import { useLanguage } from './i18n/LanguageContext';
 
@@ -127,6 +128,8 @@ export const App: React.FC = () => {
             <ManifestoPillars
               onGoToEpilog={() => navigateTo('library', 'gemini', 'epilog')}
             />
+
+            <SupportSection />
           </>
         )}
 

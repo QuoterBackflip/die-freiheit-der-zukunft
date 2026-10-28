@@ -86,8 +86,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="hover:text-amber-500 transition-colors flex items-center gap-1.5 opacity-80 hover:opacity-100 cursor-pointer"
                 >
                   <span>{t('nav.claude')}</span>
-                  <span className="text-[10px] uppercase px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">
-                    {t('badge.inPreparation')}
+                  <span className="text-[10px] uppercase font-bold px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+                    {t('badge.complete')}
                   </span>
                 </button>
               </li>
@@ -138,6 +138,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="hover:text-amber-500 transition-colors opacity-80 hover:opacity-100 cursor-pointer"
                 >
                   {t('footer.manifestoLink')}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    onNavigate('home');
+                    setTimeout(() => {
+                      const el = document.getElementById('support');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }, 50);
+                  }}
+                  className="hover:text-amber-500 transition-colors opacity-80 hover:opacity-100 cursor-pointer inline-flex items-center gap-1 text-amber-600 dark:text-amber-400 font-medium"
+                >
+                  {t('support.tag')}
                 </button>
               </li>
             </ul>

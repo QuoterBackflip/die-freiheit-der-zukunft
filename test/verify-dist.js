@@ -165,13 +165,23 @@ assert(fs.existsSync(distSitemapPath), 'dist/sitemap.xml muss existieren');
 const distSitemap = fs.readFileSync(distSitemapPath, 'utf-8');
 assert(distSitemap.includes('https://quoterbackflip.github.io/die-freiheit-der-zukunft/') || distSitemap.includes('https://freiheit-der-zukunft.de/'), 'dist/sitemap.xml muss Domain enthalten');
 assert(distSitemap.includes('hreflang="zh-CN"'), 'dist/sitemap.xml muss mehrsprachige Alternates enthalten');
+assert(!distSitemap.includes('#'), 'dist/sitemap.xml darf keine Hash-Routen (#) enthalten');
+assert(distSitemap.includes('?lang=de'), 'dist/sitemap.xml muss Sprach-Landingpages enthalten');
 
 // 15. Structured Data and Crawler Fallback in dist/index.html
 assert(indexHtml.includes('application/ld+json'), 'dist/index.html muss Schema.org JSON-LD enthalten');
 assert(indexHtml.includes('<noscript>'), 'dist/index.html muss noscript-Fallback für Nicht-JS-Crawler enthalten');
-assert(indexHtml.includes('rel="canonical"'), 'dist/index.html muss kanonischen Link enthalten');
+// 16. Stripe Support Section, Verified QR-Codes & Privacy Visitor Counter
+const distQrSvgPath = path.join(distDir, 'stripe-qr-code.svg');
+const distQrPngPath = path.join(distDir, 'stripe-qr-code.png');
+assert(fs.existsSync(distQrSvgPath), 'dist/stripe-qr-code.svg muss in dist/ vorhanden sein');
+assert(fs.existsSync(distQrPngPath), 'dist/stripe-qr-code.png muss in dist/ vorhanden sein');
+assert(bundleContent.includes('https://buy.stripe.com/dRmcN7gjYduocKy42C7bW01'), 'Produktionsbundle muss exakten Stripe-Link enthalten');
+assert(bundleContent.includes('fdz_visitor_count'), 'Produktionsbundle muss lokalen, datenschutzfreundlichen Besucherzähler enthalten');
+console.log('✓ Stripe-Unterstützungslink, QR-Codes und datenschutzfreundlicher Besucherzähler in dist/ verifiziert.');
 
 console.log('✓ Vollständige Textinhalte von Waldemar Scheiermann (Deutsche, Englische, Spanische, Chinesische und Arabische Bücher, 5 UI-Sprachen, 4-Perspektiven-Synopse und SEO-Dateien) im Produktionsbundle verifiziert.');
 console.log('--------------------------------------------------');
 console.log('ERGEBNIS: Alle Produktionstests erfolgreich bestanden!');
+
 

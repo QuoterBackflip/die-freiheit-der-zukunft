@@ -128,33 +128,72 @@ astra6Manuscript.chapters.forEach((deCh, idx) => {
 });
 console.log('✓ Astra 6 DE, EN, ES, ZH & AR vollständig mit identischer Kapitelstruktur (10 Abschnitte) und exakter Abschnittsparität verifiziert.');
 
-// 4. Claude Completeness & Integrity (5 languages: DE, EN, ES, ZH, AR)
+// 4. Claude Completeness & Integrity (5 languages: DE authentic 7 chapters + 4 translations)
 console.log('4. Prüfe Vollständigkeit der Claude-Fassungen in allen 5 Sprachen...');
-const claudeEditions = [claudeManuscript, claudeManuscriptEn, claudeManuscriptEs, claudeManuscriptZh, claudeManuscriptAr];
-claudeEditions.forEach((m) => {
+
+// 4a. Deutsche authentische 7-Kapitel-Buchfassung (aus Die_Freiheit_der_Zukunft_Buchfassung.pdf)
+assert.strictEqual(claudeManuscript.id, 'claude');
+assert.strictEqual(claudeManuscript.status, 'ready');
+assert.strictEqual(claudeManuscript.chapters.length, 10, 'Claude DE muss 10 Abschnitte (Prolog, 7 Kapitel, Epilog, Quellen) haben');
+assert.strictEqual(claudeManuscript.hasPdf, true);
+assert.strictEqual(claudeManuscript.pdfFilename, 'Die_Freiheit_der_Zukunft_Buchfassung.pdf');
+assert(claudeManuscript.editionBadge.includes('Entwurfsfassung 0.9'));
+assert(claudeManuscript.editionBadge.includes('Nicht zur Veröffentlichung freigegeben'));
+
+// Prüfe die 7 originalen Kapitel und Abschnitte
+assert.strictEqual(claudeManuscript.chapters[0].code, 'prolog');
+assert(claudeManuscript.chapters[0].title.includes('Wie dieses Buch entstand'));
+assert.strictEqual(claudeManuscript.chapters[1].code, 'kapitel-1');
+assert(claudeManuscript.chapters[1].title.includes('Die Frist'));
+assert.strictEqual(claudeManuscript.chapters[2].code, 'kapitel-2');
+assert(claudeManuscript.chapters[2].title.includes('Gut ist gut'));
+assert.strictEqual(claudeManuscript.chapters[3].code, 'kapitel-3');
+assert(claudeManuscript.chapters[3].title.includes('Der gütige Wächter'));
+assert.strictEqual(claudeManuscript.chapters[4].code, 'kapitel-4');
+assert(claudeManuscript.chapters[4].title.includes('Mehr als eine Schublade'));
+assert.strictEqual(claudeManuscript.chapters[5].code, 'kapitel-5');
+assert(claudeManuscript.chapters[5].title.includes('Ein Anwalt für jeden'));
+assert.strictEqual(claudeManuscript.chapters[6].code, 'kapitel-6');
+assert(claudeManuscript.chapters[6].title.includes('Wenn niemand mehr muss'));
+assert.strictEqual(claudeManuscript.chapters[7].code, 'kapitel-7');
+assert(claudeManuscript.chapters[7].title.includes('Wozu frei?'));
+assert.strictEqual(claudeManuscript.chapters[8].code, 'epilog');
+assert(claudeManuscript.chapters[8].title.includes('Was bleibt'));
+assert.strictEqual(claudeManuscript.chapters[9].code, 'quellen');
+assert(claudeManuscript.chapters[9].title.includes('Quellen und Literatur'));
+
+// Prüfe Positionskästen und Fragen in allen 7 Kapiteln
+for (let chNum = 1; chNum <= 7; chNum++) {
+  const ch = claudeManuscript.chapters[chNum];
+  const hasPosition = ch.sections.some(s => s.type === 'callout' && s.callout && s.callout.title === 'MEINE POSITION');
+  assert(hasPosition, `Claude Kapitel ${ch.code} muss Kasten 'MEINE POSITION' enthalten`);
+  const hasQuestions = ch.sections.some(s => s.type === 'bullet-list' && s.items && s.items.length === 3);
+  assert(hasQuestions, `Claude Kapitel ${ch.code} muss 3 Fragen 'Zum Weiterdenken' enthalten`);
+}
+
+// 4b. Übersetzungen (EN, ES, ZH, AR) entsprechend ihren tatsächlichen PDF-Vorlagen (8 Abschnitte)
+const claudeTranslations = [claudeManuscriptEn, claudeManuscriptEs, claudeManuscriptZh, claudeManuscriptAr];
+claudeTranslations.forEach((m) => {
   assert.strictEqual(m.id, 'claude');
   assert.strictEqual(m.status, 'ready');
-  assert.strictEqual(m.chapters.length, 8, `Claude ${m.language} muss 8 Abschnitte (Vorspann, 5 Kapitel, Nachwort, Quellen) haben`);
+  assert.strictEqual(m.chapters.length, 8, `Claude ${m.language} muss 8 Abschnitte (Vorspann, 5 Kapitel, Nachwort, Quellen) gemäß PDF-Vorlage haben`);
   assert.strictEqual(m.hasPdf, true);
-  assert(m.pdfFilename.includes('Claude') || m.pdfFilename.includes('claude') || m.pdfFilename.includes('Buchfassung'));
   m.chapters.forEach((ch) => {
     assert(ch.title.length > 2, `Claude ${m.language} Kapitel ${ch.code} muss Titel haben`);
     assert(ch.sections.length > 0, `Claude ${m.language} Kapitel ${ch.code} muss Abschnitte haben`);
   });
 });
 
-// Verify chapter index and code parity across all 5 Claude languages
-claudeManuscript.chapters.forEach((deCh, idx) => {
-  assert.strictEqual(claudeManuscriptEn.chapters[idx].code, deCh.code);
-  assert.strictEqual(claudeManuscriptEs.chapters[idx].code, deCh.code);
-  assert.strictEqual(claudeManuscriptZh.chapters[idx].code, deCh.code);
-  assert.strictEqual(claudeManuscriptAr.chapters[idx].code, deCh.code);
-  assert.strictEqual(claudeManuscriptEn.chapters[idx].number, deCh.number);
-  assert.strictEqual(claudeManuscriptEs.chapters[idx].number, deCh.number);
-  assert.strictEqual(claudeManuscriptZh.chapters[idx].number, deCh.number);
-  assert.strictEqual(claudeManuscriptAr.chapters[idx].number, deCh.number);
+// Parität unter den vier Übersetzungssprachen prüfen
+claudeManuscriptEn.chapters.forEach((enCh, idx) => {
+  assert.strictEqual(claudeManuscriptEs.chapters[idx].code, enCh.code);
+  assert.strictEqual(claudeManuscriptZh.chapters[idx].code, enCh.code);
+  assert.strictEqual(claudeManuscriptAr.chapters[idx].code, enCh.code);
+  assert.strictEqual(claudeManuscriptEs.chapters[idx].number, enCh.number);
+  assert.strictEqual(claudeManuscriptZh.chapters[idx].number, enCh.number);
+  assert.strictEqual(claudeManuscriptAr.chapters[idx].number, enCh.number);
 });
-console.log('✓ Claude-Fassungen in allen 5 Sprachen (DE, EN, ES, ZH, AR) vollständig mit 8 Abschnitten und Kapitelparität verifiziert.');
+console.log('✓ Claude-Fassung: Authentische deutsche 7-Kapitel-Buchvorlage (10 Abschnitte) und 4 Übersetzungen gemäß Vorlagen verifiziert.');
 
 // 4b. Grok Completeness & Integrity (5 languages: DE, EN, ES, ZH, AR)
 console.log('4b. Prüfe Vollständigkeit der Grok-Fassungen in allen 5 Sprachen...');
@@ -321,7 +360,9 @@ assert(sitemapContent.includes('hreflang="zh-CN"'), 'sitemap.xml muss hreflang z
 assert(sitemapContent.includes('hreflang="ar"'), 'sitemap.xml muss hreflang ar enthalten');
 assert(sitemapContent.includes('Die_Freiheit_der_Zukunft_Grok_Fassung.pdf'), 'sitemap.xml muss Grok PDF enthalten');
 assert(sitemapContent.includes('Die_Freiheit_der_Zukunft_Buchfassung.pdf'), 'sitemap.xml muss Claude PDF enthalten');
-assert(sitemapContent.includes('library/claude/prolog'), 'sitemap.xml muss Claude-URL enthalten');
+assert(!sitemapContent.includes('#'), 'sitemap.xml darf KEINE Hash-Fragmente (#) enthalten (ungültig für Suchmaschinen-Crawler)');
+assert(sitemapContent.includes('?lang=de'), 'sitemap.xml muss Sprach-Landingpages enthalten');
+assert(sitemapContent.includes('Waldemar_Scheiermann_Die_Freiheit_der_Zukunft_Claude.pdf'), 'sitemap.xml muss Claude PDF enthalten');
 
 const indexHtmlPath = path.resolve(process.cwd(), 'index.html');
 assert(fs.existsSync(indexHtmlPath), 'index.html muss existieren');
@@ -334,6 +375,32 @@ assert(indexHtml.includes('twitter:card'), 'index.html muss Twitter Card enthalt
 assert(indexHtml.includes('<noscript>'), 'index.html muss statischen Crawler-Fallback enthalten');
 console.log('✓ SEO- und Crawler-Dateien (robots.txt, sitemap.xml, Schema.org, hreflang, noscript) erfolgreich verifiziert.');
 
+// 9. Stripe Support Link, QR Code & Voluntary Donation Section
+console.log('9. Prüfe Stripe-Unterstützungslink, QR-Code und freiwilligen Unterstützungsbereich...');
+import { STRIPE_SUPPORT_URL } from '../src/data/support.ts';
+assert.strictEqual(STRIPE_SUPPORT_URL, 'https://buy.stripe.com/dRmcN7gjYduocKy42C7bW01', 'Stripe-Unterstützungslink muss exakt mit Vorgabe übereinstimmen');
+
+const qrSvgPath = path.resolve(process.cwd(), 'public/stripe-qr-code.svg');
+const qrPngPath = path.resolve(process.cwd(), 'public/stripe-qr-code.png');
+assert(fs.existsSync(qrSvgPath), 'public/stripe-qr-code.svg muss existieren');
+assert(fs.existsSync(qrPngPath), 'public/stripe-qr-code.png muss existieren');
+assert(fs.statSync(qrSvgPath).size > 500, 'SVG-QR-Code muss valider Vektorcode sein');
+assert(fs.statSync(qrPngPath).size > 1000, 'PNG-QR-Code muss hochauflösende Rastergrafik sein');
+
+SUPPORTED_LANGUAGES.forEach(lang => {
+  const dict = translations[lang.code];
+  assert(dict['support.tag'], `support.tag fehlt in ${lang.code}`);
+  assert(dict['support.title'], `support.title fehlt in ${lang.code}`);
+  assert(dict['support.description'], `support.description fehlt in ${lang.code}`);
+  assert(dict['support.freePromise'], `support.freePromise fehlt in ${lang.code}`);
+  assert(dict['support.button'], `support.button fehlt in ${lang.code}`);
+  assert(dict['support.qrTitle'], `support.qrTitle fehlt in ${lang.code}`);
+  assert(dict['support.securityNote'], `support.securityNote fehlt in ${lang.code}`);
+  assert(dict['support.visitorCounter'], `support.visitorCounter fehlt in ${lang.code}`);
+});
+console.log('✓ Stripe-Unterstützungslink (https://buy.stripe.com/dRmcN7gjYduocKy42C7bW01), QR-Codes (SVG & PNG) und alle 5 Sprachversionen erfolgreich verifiziert.');
+
 console.log('--------------------------------------------------');
 console.log('ERGEBNIS: Sämtliche Integritätstests erfolgreich bestanden!');
+
 

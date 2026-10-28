@@ -18,6 +18,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [uiLanguage, setUiLanguageState] = useState<UiLanguage>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get('lang') as UiLanguage | null;
+      if (urlLang && ['de', 'en', 'es', 'zh-CN', 'ar'].includes(urlLang)) {
+        return urlLang;
+      }
+    }
     const saved = localStorage.getItem('ui-language') as UiLanguage | null;
     if (saved && ['de', 'en', 'es', 'zh-CN', 'ar'].includes(saved)) {
       return saved;
@@ -26,6 +33,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   });
 
   const [bookLanguage, setBookLanguageState] = useState<BookLanguage>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get('lang') as BookLanguage | null;
+      if (urlLang && ['de', 'en', 'es', 'zh-CN', 'ar'].includes(urlLang)) {
+        return urlLang;
+      }
+    }
     const saved = localStorage.getItem('book-language') as BookLanguage | null;
     if (saved && ['de', 'en', 'es', 'zh-CN', 'ar'].includes(saved)) {
       return saved;

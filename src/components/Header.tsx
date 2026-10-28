@@ -137,6 +137,20 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, activeM
             </button>
 
             <button
+              onClick={() => onNavigate('library', 'claude')}
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-amber-500/50 cursor-pointer ${
+                currentView === 'library' && activeManuscriptId === 'claude'
+                  ? 'text-amber-600 dark:text-amber-400 bg-amber-500/15 font-semibold ring-1 ring-amber-500/30'
+                  : 'text-ink/80 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-black/5 dark:hover:bg-white/5'
+              }`}
+            >
+              <span>{t('nav.claude')}</span>
+              <span className="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400">
+                {t('badge.pdf')}
+              </span>
+            </button>
+
+            <button
               onClick={() => onNavigate('topics')}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-amber-500/50 cursor-pointer ${
                 currentView === 'topics'
@@ -291,11 +305,15 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, activeM
 
           <button
             onClick={() => { onNavigate('library', 'claude'); setMobileMenuOpen(false); }}
-            className="w-full text-left rtl:text-right px-4 py-2.5 rounded-lg text-sm text-ink/70 flex items-center justify-between hover:bg-black/5 dark:hover:bg-white/5 pl-8 rtl:pr-8 rtl:pl-4 focus:outline-none focus:ring-2 focus:ring-amber-500/50 cursor-pointer transition-colors"
+            className={`w-full text-left rtl:text-right px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500/50 cursor-pointer ${
+              currentView === 'library' && activeManuscriptId === 'claude'
+                ? 'bg-amber-500/15 text-amber-600 dark:text-amber-400 font-semibold ring-1 ring-amber-500/30'
+                : 'text-ink hover:text-amber-600 dark:hover:text-amber-400 hover:bg-black/5 dark:hover:bg-white/5'
+            }`}
           >
             <span>{t('nav.claude')}</span>
-            <span className="text-[11px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">
-              {t('badge.inPreparation')}
+            <span className="text-xs uppercase font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-400">
+              {t('badge.complete')}
             </span>
           </button>
 

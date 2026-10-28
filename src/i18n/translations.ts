@@ -162,6 +162,17 @@ export interface Translations {
   'footer.noCookies': string;
   'footer.noTracking': string;
   'footer.culturalHeritage': string;
+
+  // Support Section
+  'support.tag': string;
+  'support.title': string;
+  'support.description': string;
+  'support.freePromise': string;
+  'support.button': string;
+  'support.qrTitle': string;
+  'support.qrHint': string;
+  'support.securityNote': string;
+  'support.visitorCounter': string;
 }
 
 export const translations: Record<UiLanguage, Translations> = {
@@ -316,7 +327,18 @@ export const translations: Record<UiLanguage, Translations> = {
     'footer.noShop': 'Kein Shop',
     'footer.noCookies': 'Keine Cookies',
     'footer.noTracking': 'Kein Tracking',
-    'footer.culturalHeritage': 'Reines Kulturgut'
+    'footer.culturalHeritage': 'Reines Kulturgut',
+
+    // Support Section
+    'support.tag': 'Freiwillige Unterstützung',
+    'support.title': 'Das philosophische Projekt unterstützen',
+    'support.description': '„Die Freiheit der Zukunft“ ist und bleibt als digitale Bibliothek vollständig kostenlos und frei zugänglich. Alle vier KI-Autorenfassungen (Gemini, Astra 6, Grok und Claude) können ohne Registrierung, ohne Werbung und ohne Bezahlschranke online gelesen und heruntergeladen werden. Wer die unabhängige redaktionelle und technische Weiterentwicklung der mehrsprachigen Bibliothek freiwillig unterstützen möchte, kann dies über einen sicheren Beitrag via Stripe tun.',
+    'support.freePromise': '100% kostenloser Zugang · Keine Bezahlschranke · Alle 4 KI-Fassungen frei lesbar',
+    'support.button': 'Projekt via Stripe unterstützen',
+    'support.qrTitle': 'QR-Code scannen',
+    'support.qrHint': 'Mit dem Smartphone scannen, um direkt zum sicheren Stripe-Unterstützungslink zu gelangen.',
+    'support.securityNote': 'Sicherer Transfer direkt über Stripe · Keine Erfassung von Zahlungsdaten auf unserer Website · Vollständig freiwillig',
+    'support.visitorCounter': 'Besucherzähler: aktiv (anonymisiert, lokal & ohne Tracking)'
   },
 
   // ==========================================
@@ -470,7 +492,18 @@ export const translations: Record<UiLanguage, Translations> = {
     'footer.noShop': 'No Shop',
     'footer.noCookies': 'No Cookies',
     'footer.noTracking': 'No Tracking',
-    'footer.culturalHeritage': 'Pure Cultural Heritage'
+    'footer.culturalHeritage': 'Pure Cultural Heritage',
+
+    // Support Section
+    'support.tag': 'Voluntary Support',
+    'support.title': 'Support the Philosophical Project',
+    'support.description': '“The Freedom of the Future” is and will always remain a completely free and openly accessible digital library. All four AI author editions (Gemini, Astra 6, Grok, and Claude) can be read and downloaded online without registration, advertisements, or paywalls. Anyone wishing to voluntarily support the independent editorial and technical advancement of this multilingual library is warmly invited to make a secure contribution via Stripe.',
+    'support.freePromise': '100% Free Access · No Paywall · All 4 AI Editions Freely Readable',
+    'support.button': 'Support Project via Stripe',
+    'support.qrTitle': 'Scan QR Code',
+    'support.qrHint': 'Scan with your smartphone camera to open the secure Stripe contribution link directly.',
+    'support.securityNote': 'Secure transfer directly via Stripe · No payment details stored on this website · 100% voluntary',
+    'support.visitorCounter': 'Visitor counter: active (anonymized, local & zero-tracking)'
   },
 
   // ==========================================
@@ -624,7 +657,18 @@ export const translations: Record<UiLanguage, Translations> = {
     'footer.noShop': 'Sin tienda',
     'footer.noCookies': 'Sin cookies',
     'footer.noTracking': 'Sin rastreo',
-    'footer.culturalHeritage': 'Patrimonio cultural puro'
+    'footer.culturalHeritage': 'Patrimonio cultural puro',
+
+    // Support Section
+    'support.tag': 'Apoyo Voluntario',
+    'support.title': 'Apoyar el proyecto filosófico',
+    'support.description': '«La Libertad del Futuro» es y seguirá siendo una biblioteca digital completamente gratuita y de libre acceso. Las cuatro ediciones de autor de IA (Gemini, Astra 6, Grok y Claude) pueden leerse y descargarse sin registro, sin publicidad y sin muros de pago. Quienes deseen apoyar voluntariamente el desarrollo editorial y técnico independiente de esta biblioteca multilingüe pueden hacerlo mediante una contribución segura a través de Stripe.',
+    'support.freePromise': 'Acceso 100% gratuito · Sin muro de pago · 4 ediciones de IA libres',
+    'support.button': 'Apoyar el proyecto a través de Stripe',
+    'support.qrTitle': 'Escanear código QR',
+    'support.qrHint': 'Escanee con su teléfono inteligente para abrir directamente el enlace seguro de Stripe.',
+    'support.securityNote': 'Transferencia segura vía Stripe · Sin registro de datos de pago en nuestro sitio web · 100% voluntario',
+    'support.visitorCounter': 'Contador de visitas: activo (anónimo, local y sin rastreo)'
   },
 
   // ==========================================
@@ -778,7 +822,18 @@ export const translations: Record<UiLanguage, Translations> = {
     'footer.noShop': '无商城',
     'footer.noCookies': '无Cookies',
     'footer.noTracking': '无追踪',
-    'footer.culturalHeritage': '纯粹文化遗产'
+    'footer.culturalHeritage': '纯粹文化遗产',
+
+    // Support Section
+    'support.tag': '自愿赞助',
+    'support.title': '支持这一哲学探索项目',
+    'support.description': '《未来之自由》始终作为一个完全免费、公开开放的数字图书馆存在。所有四种AI作者版本（Gemini、Astra 6、Grok 和 Claude）均可在线完整阅读并下载PDF，无需注册、无广告且无任何付费门槛。若您希望自愿支持本多语言图书馆的独立编辑与技术发展，欢迎通过Stripe进行安全赞助。',
+    'support.freePromise': '100%免费访问 · 无付费门槛 · 四大AI版本完全开放',
+    'support.button': '通过 Stripe 支持本项目',
+    'support.qrTitle': '扫描二维码',
+    'support.qrHint': '使用手机相机扫描二维码，即可直接打开 Stripe 安全赞助页面。',
+    'support.securityNote': '通过 Stripe 官方通道安全支付 · 本站不采集任何支付数据 · 完全自愿',
+    'support.visitorCounter': '访客计数器：已激活（匿名、本地且无追踪）'
   },
 
   // ==========================================
@@ -932,6 +987,17 @@ export const translations: Record<UiLanguage, Translations> = {
     'footer.noShop': 'بلا متجر',
     'footer.noCookies': 'بلا ملفات تعريف ارتباط',
     'footer.noTracking': 'بلا تتبع',
-    'footer.culturalHeritage': 'تراث ثقافي خالص'
+    'footer.culturalHeritage': 'تراث ثقافي خالص',
+
+    // Support Section
+    'support.tag': 'دعم تطوعي',
+    'support.title': 'دعم هذا المشروع الفلسفي',
+    'support.description': 'إن "حرية المستقبل" مكتبة رقمية مجانية ومتاحة للجميع بالكامل وستظل كذلك دائمًا. يمكن قراءة وتنزيل جميع طبعات مؤلفي الذكاء الاصطناعي الأربع (جيميني، أسترا 6، غروك، وكلود) عبر الإنترنت دون تسجيل ودون إعلانات وبدون أي رسوم. نرحب بأي دعم طوعي للتطوير المستقل والتقني لهذه المكتبة المتعددة اللغات عبر مساهمة آمنة من خلال Stripe.',
+    'support.freePromise': 'وصول مجاني 100% · بدون جدار دفع · جميع طبعات الذكاء الاصطناعي متاحة بالكامل',
+    'support.button': 'دعم المشروع عبر Stripe',
+    'support.qrTitle': 'امسح رمز الاستجابة السريعة (QR)',
+    'support.qrHint': 'امسح الرمز بكاميرا هاتفك الذكي للانتقال مباشرة إلى رابط الدعم الآمن عبر Stripe.',
+    'support.securityNote': 'تحويل آمن مباشرة عبر Stripe · لا يتم تسجيل أي بيانات دفع على موقعنا · تطوعي بالكامل',
+    'support.visitorCounter': 'عداد الزوار: نشط (مجهول الهوية، محلي وبدون تتبع)'
   }
 };

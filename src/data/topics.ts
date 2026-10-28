@@ -158,9 +158,9 @@ export const comparisonMatrix: PerspectiveComparisonTopic[] = [
     },
     claudePerspective: {
       status: 'ready',
-      coreArgument: 'Funktionale Gewaltenteilung als philosophisches Prinzip: Wirtschafts-KI für rationale Gesamtressourcen vs. Menschen-KI als individueller Anwalt des Einzelschicksals, ergänzt um die Lebens-KI für ökologische Existenzbedingungen. Keine Instanz besitzt absolute moralische Wahrheit.',
-      quote: '„Keine Instanz besitzt automatisch die absolute moralische Wahrheit. Die Wirtschafts-KI überblickt das Ganze, während die Menschen-KI das individuelle Schicksal im Blick behält.“',
-      chapterRef: 'kapitel-4'
+      coreArgument: 'Zwei-KI-Modell und digitale Gewaltenteilung: Eine Wirtschafts-KI für Ressourcen und Stabilität, eine Menschen-KI als parteiischer Tarifpartner und Anwalt für den Einzelnen – mit unabhängiger Kontrolle und menschlicher Letztentscheidung.',
+      quote: '„Es gibt eine KI, die sich um das Wirtschaftliche kümmert, und eine, die sich um die Bedürfnisse der einzelnen Menschen kümmert.“',
+      chapterRef: 'kapitel-5'
     }
   },
   {
@@ -187,9 +187,9 @@ export const comparisonMatrix: PerspectiveComparisonTopic[] = [
     },
     claudePerspective: {
       status: 'ready',
-      coreArgument: 'Gestaltete Freiheit jenseits des Arbeitszwangs: Das Ende der Erwerbsnotwendigkeit befreit zur schöpferischen Tätigkeit in offenen Projektzentren. Materielle Versorgung allein stiftet keinen Sinn – menschliche Bindung, Resonanz und die Last eigener Entscheidungen bleiben unersetzbar.',
-      quote: '„Ein Zukunftsbild ist nicht schon dadurch frei, dass Maschinen die notwendige Arbeit verrichten. Es bemisst sich daran, ob der Mensch selbst entscheiden kann, was seinem Leben Wert verleiht.“',
-      chapterRef: 'kapitel-5'
+      coreArgument: 'Koexistenz statt Ersatz: Eine Welt ohne Arbeitszwang ist Befreiung und Stillstand zugleich. Materielle Versorgung durch KIs ersetzt keine Verbundenheit; Menschen brauchen schöpferische Ventile für Handwerk, Kunst und gemeinsames Lernen.',
+      quote: '„Wir Menschen brauchen Ventile.“ — „Alles Materielle hilft nicht, wenn wir Menschen keine Verbindung zueinander eingehen.“',
+      chapterRef: 'kapitel-6'
     }
   }
 ];
